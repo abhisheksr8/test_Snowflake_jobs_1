@@ -1,0 +1,246 @@
+{
+  "metainfo" : {
+    "type" : "Prophecy",
+    "fabricId" : "16",
+    "jobId" : "jobs/Snowflake-SQLAirflow-PM-Automation",
+    "name" : "Snowflake-SQLAirflow-PM-Automation",
+    "dagName" : "f0buWu40lDcMQCjyFLx5YQ_",
+    "schedule" : "0 0 17 2 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "pool" : "BOQhdxeL",
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "endDate" : "2034-09-17",
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "UWK-sd7o0OVN7vRmgM9Bz$$nLoezkEB1LX_BsSNpxctb" : {
+      "id" : "UWK-sd7o0OVN7vRmgM9Bz$$nLoezkEB1LX_BsSNpxctb",
+      "component" : "Slack",
+      "metadata" : {
+        "label" : "Slack_1",
+        "slug" : "Slack_1",
+        "x" : -300,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ICgQX3v0018-0xHRn8aK0$$sPIfRm3B5klJEDZK5dj_G",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "S9Loaug6I4N8YVyw15MjZ$$muiyIB4WKe0MkxY2RJxTD",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "channel" : "abhyslackpub",
+        "text" : "Test Automation Airflow",
+        "token" : null,
+        "slackConnectionId" : "Kz0VaT1RbgZ6QSdK_25Ak",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "JdgeeuvlYR1jtYpsub8V7$$SehnfqSL4VgleXxR8ep0J" : {
+      "id" : "JdgeeuvlYR1jtYpsub8V7$$SehnfqSL4VgleXxR8ep0J",
+      "component" : "S3FileSensor",
+      "metadata" : {
+        "label" : "S3FileSensor_1",
+        "slug" : "S3FileSensor_1",
+        "x" : -160,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "FXyzK9KwDphfSIDd4bAMN$$2Woh2jof99vYmf-NZpd59",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "A5BtSdw675y07UdNj46pc$$wnfa1b5Lcn0yYYsCiwQ71",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "awsConnectionId" : "ELMQBkPu5Stb2mM7ysnF-",
+        "wildCardMatch" : false,
+        "responseCheck" : null,
+        "verifySslCertificates" : false,
+        "s3Paths" : "test/validation_data/test_source.json",
+        "timeout" : 600,
+        "bucketName" : "qa-prophecy",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "OeWVo5kmrz31dadc0Mwmh" : {
+      "id" : "OeWVo5kmrz31dadc0Mwmh",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "out",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "entityId" : "1789/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+        "runModelWithParents" : false,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "customVersion" : true,
+        "projectId" : "1789",
+        "runMode" : "model",
+        "loadingModels" : false,
+        "runTest" : true,
+        "entityName" : "test_Automation_Snowflake_jobs_model",
+        "sqlFabricId" : "5",
+        "gitEntityValue" : "testBranchSnowflakeJobs",
+        "runModelWithChildren" : false,
+        "gitEntityValueBranch" : "testBranchSnowflakeJobs",
+        "currentProjectModels" : [ {
+          "label" : "test_Automation_Snowflake_jobs_model",
+          "value" : "test_Automation_Snowflake_jobs_model",
+          "id" : "1789/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+          "name" : "test_Automation_Snowflake_jobs_model"
+        }, {
+          "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "value" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "id" : "1789/.prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model",
+          "name" : "test_modelanother_Automation_Snowflake_jobs_model"
+        } ]
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "gGy2r-3Q8Rc5qlcp67AeO$$VwwWcDAMcynjvK80BK297" : {
+      "id" : "gGy2r-3Q8Rc5qlcp67AeO$$VwwWcDAMcynjvK80BK297",
+      "component" : "HTTPSensor",
+      "metadata" : {
+        "label" : "HTTPSensor_1",
+        "slug" : "HTTPSensor_1",
+        "x" : -20,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "CaN0e6ZtQ38HAFxBnzF_S$$k_zXwrW1IWTrFYwJvxQuj",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "A0k06sLjbjmFqL5oj6Tjx$$lpJYsGR36tSAYfPwbC2jn",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "pokeInterval" : 10,
+        "httpConnectionId" : "PzdsaTkar1GpgChc4ESlS",
+        "responseCheck" : "",
+        "endpoint" : "/webhp",
+        "requestParams" : null,
+        "timeout" : 600,
+        "taskId" : null,
+        "requestHeaders" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "8F7MooTzz3iQbK68D4Tjm$$aaZDouFibfntMfdVDmXPy" : {
+      "id" : "8F7MooTzz3iQbK68D4Tjm$$aaZDouFibfntMfdVDmXPy",
+      "component" : "Email",
+      "metadata" : {
+        "label" : "Email_1",
+        "slug" : "Email_1",
+        "x" : -440,
+        "y" : -80
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Zg7stXXQld4M6OStWi6U0$$M-gL18RjTIynO3D4j3Jec",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "XSZPvZ-Ofobmtd4xlfo4J$$OlnLJh56YkGfAYidjuQbd",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "emailCC" : "navneet@prophecy.io",
+        "subject" : "Test Subject",
+        "emailBCC" : "sony@prophecy.io",
+        "emailTo" : "abhisheks@prophecy.io",
+        "emailConnectionId" : "PR5XiKJXIulYebtuxwOAO",
+        "htmlContent" : "Test Content",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "wGQKIRD8KVpL4JccXS9gh",
+    "source" : "OeWVo5kmrz31dadc0Mwmh",
+    "target" : "8F7MooTzz3iQbK68D4Tjm$$aaZDouFibfntMfdVDmXPy",
+    "sourcePort" : "out",
+    "targetPort" : "Zg7stXXQld4M6OStWi6U0$$M-gL18RjTIynO3D4j3Jec"
+  }, {
+    "id" : "vZyG-cwTpIOKAzT7rLJm7",
+    "source" : "OeWVo5kmrz31dadc0Mwmh",
+    "target" : "UWK-sd7o0OVN7vRmgM9Bz$$nLoezkEB1LX_BsSNpxctb",
+    "sourcePort" : "out",
+    "targetPort" : "ICgQX3v0018-0xHRn8aK0$$sPIfRm3B5klJEDZK5dj_G"
+  }, {
+    "id" : "0yBAIU9OSblT2CLYRBGLS",
+    "source" : "OeWVo5kmrz31dadc0Mwmh",
+    "target" : "JdgeeuvlYR1jtYpsub8V7$$SehnfqSL4VgleXxR8ep0J",
+    "sourcePort" : "out",
+    "targetPort" : "FXyzK9KwDphfSIDd4bAMN$$2Woh2jof99vYmf-NZpd59"
+  }, {
+    "id" : "n4Ci68t6JwqOCtTSWOZNc",
+    "source" : "OeWVo5kmrz31dadc0Mwmh",
+    "target" : "gGy2r-3Q8Rc5qlcp67AeO$$VwwWcDAMcynjvK80BK297",
+    "sourcePort" : "out",
+    "targetPort" : "CaN0e6ZtQ38HAFxBnzF_S$$k_zXwrW1IWTrFYwJvxQuj"
+  } ]
+}
