@@ -51,19 +51,7 @@ subgraphs: {}
 sqlModels:
   .prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model:
     name: test_Automation_Snowflake_jobs_model
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: ID
-        dataType:
-          type: Number
-      - name: NAME
-        dataType:
-          type: String
-      - name: UPDATED_AT
-        dataType:
-          type: Date
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
@@ -79,31 +67,7 @@ sqlModels:
 sqlSnapshots:
   .prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model:
     name: test_modelanother_Automation_Snowflake_jobs_model
-    schema:
-      entityType: ''
-      providerType: Snowflake
-      fields:
-      - name: ID
-        dataType:
-          type: Number
-      - name: NAME
-        dataType:
-          type: String
-      - name: UPDATED_AT
-        dataType:
-          type: Date
-      - name: DBT_SCD_ID
-        dataType:
-          type: String
-      - name: DBT_UPDATED_AT
-        dataType:
-          type: Date
-      - name: DBT_VALID_FROM
-        dataType:
-          type: Date
-      - name: DBT_VALID_TO
-        dataType:
-          type: Date
+    schema: null
     description: null
     author: abhisheks+e2etests@prophecy.io
     files:
