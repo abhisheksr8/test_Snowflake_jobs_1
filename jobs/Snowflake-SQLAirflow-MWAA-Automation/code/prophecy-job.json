@@ -1,0 +1,41 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "1005",
+    "jobId" : "jobs/Snowflake-SQLAirflow-MWAA-Automation",
+    "name" : "Snowflake-SQLAirflow-MWAA-Automation",
+    "dagName" : "regression_abhisheks_e2etests_Snowflake_AutomationJobs_Project_Snowflake_SQLAirflow_MWAA_Automation",
+    "schedule" : "0 0 17 2 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : { },
+  "connections" : [ ]
+}
