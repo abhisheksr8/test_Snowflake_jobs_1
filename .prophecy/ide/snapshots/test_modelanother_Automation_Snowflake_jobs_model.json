@@ -1,0 +1,95 @@
+{
+  "id" : "test_modelanother_Automation_Snowflake_jobs_model",
+  "metainfo" : {
+    "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "alias" : "\"test_Automation_Snowflake_jobs_model_1739493323949\"",
+        "strategy" : "\"timestamp\"",
+        "invalidate_hard_deletes" : true,
+        "updated_at" : "\"UPDATED_AT\"",
+        "target_schema" : "\"qa_upload_schema\"",
+        "unique_key" : [ "\"ID\"" ],
+        "type" : "SnapshotConfig"
+      }
+    },
+    "version" : 0
+  },
+  "processes" : {
+    "test_modelanother_Automation_Snowflake_jobs_model##tQzMfHs6" : {
+      "id" : "test_modelanother_Automation_Snowflake_jobs_model##tQzMfHs6",
+      "component" : "TargetSnapshot",
+      "metadata" : {
+        "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Duplicates a model for testing purposes in automation processes.",
+        "autoUpdateComment" : true
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM test_Automation_Snowflake_jobs_model\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Ew5UGFh6",
+          "slug" : "test_Automation_Snowflake_jobs_model"
+        } ],
+        "outputs" : [ {
+          "id" : "PyGmeG8k",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "vFPsJtLMdI-knGl4uD7TI" : {
+      "id" : "vFPsJtLMdI-knGl4uD7TI",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "test_Automation_Snowflake_jobs_model",
+        "slug" : "test_Automation_Snowflake_jobs_model",
+        "x" : -560,
+        "y" : -200,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "test_Automation_Snowflake_jobs_model",
+          "sourceType" : "Model",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0NJTNlB417FNkMqx75DZ_",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "dsKAuydDaVcTsqEOjGYeY",
+    "source" : "vFPsJtLMdI-knGl4uD7TI",
+    "sourcePort" : "0NJTNlB417FNkMqx75DZ_",
+    "target" : "test_modelanother_Automation_Snowflake_jobs_model##tQzMfHs6",
+    "targetPort" : "Ew5UGFh6"
+  } ],
+  "component" : "Snapshot"
+}
