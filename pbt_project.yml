@@ -32,7 +32,9 @@ jobs:
     enabled: null
     createdAt: '2025-06-02 11:41:02'
     author: abhisheks+e2etests@prophecy.io
-    models: []
+    models:
+    - test_Automation_Snowflake_jobs_model
+    - test_modelanother_Automation_Snowflake_jobs_model
     sqlProjects: []
 gemContainer:
   languageVersion: ''

@@ -36,6 +36,257 @@
       "onprem" : false
     }
   },
-  "processes" : { },
-  "connections" : [ ]
+  "processes" : {
+    "3kQlBeRNsS_FTiHoA1rod$$uDy_aDA5ofWP8rHFM6ktL" : {
+      "id" : "3kQlBeRNsS_FTiHoA1rod$$uDy_aDA5ofWP8rHFM6ktL",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : -560,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "d5C-DpiElh8lP1gCSidcb$$XXffyi-vVium5cmDa6Dl0",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "1k05XuKVivE_jqN3BcMoq$$Dh1LzgrcIai20H7dk9M8H",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "max_retry_delay" : 1
+      },
+      "properties" : {
+        "entityId" : "19915/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : true,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "tag",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "19915",
+        "runMode" : "model",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "entityName" : "test_Automation_Snowflake_jobs_model",
+        "noCacheSelectedOnly" : null,
+        "gitEntityValueTag" : "Snowflake_AutomationJobs_Project/1.0",
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "10",
+        "gitEntityValue" : "Snowflake_AutomationJobs_Project/1.0",
+        "logFormat" : null,
+        "runModelWithChildren" : true,
+        "dbtProfileSecret" : null,
+        "gitEntityValueCommit" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : true,
+        "sqlProjectType" : "snowflake",
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : null,
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "test_Automation_Snowflake_jobs_model",
+          "value" : "test_Automation_Snowflake_jobs_model",
+          "id" : "19915/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+          "name" : "test_Automation_Snowflake_jobs_model"
+        }, {
+          "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "value" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "id" : "19915/.prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model",
+          "name" : "test_modelanother_Automation_Snowflake_jobs_model"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : "model"
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "CWDHRCE_fpsOx7jb62AQr$$5w_oq3iLFhFaTUl7sye9N" : {
+      "id" : "CWDHRCE_fpsOx7jb62AQr$$5w_oq3iLFhFaTUl7sye9N",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_1",
+        "slug" : "Model_1",
+        "x" : -420,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "4Mf2bucNn0k2xy_mW0l1j$$5IVt6pgGkBGvMYmo4KOl1",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "WsNxj-sHITHxFWxRTsf62$$QFNG-qS7Wlfa42mcfx0yY",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "max_retry_delay" : 1
+      },
+      "properties" : {
+        "entityId" : "19915/.prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model",
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : true,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "19915",
+        "runMode" : "model",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "entityName" : "test_modelanother_Automation_Snowflake_jobs_model",
+        "noCacheSelectedOnly" : null,
+        "gitEntityValueTag" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "10",
+        "gitEntityValue" : "testBranchSnowflakeJobs",
+        "logFormat" : null,
+        "runModelWithChildren" : true,
+        "dbtProfileSecret" : null,
+        "gitEntityValueCommit" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : true,
+        "sqlProjectType" : "snowflake",
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : "testBranchSnowflakeJobs",
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "test_Automation_Snowflake_jobs_model",
+          "value" : "test_Automation_Snowflake_jobs_model",
+          "id" : "19915/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+          "name" : "test_Automation_Snowflake_jobs_model"
+        }, {
+          "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "value" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "id" : "19915/.prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model",
+          "name" : "test_modelanother_Automation_Snowflake_jobs_model"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : "snapshot"
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "NqYYHG0B-AuMYwpL2Zeap$$mx5bPDyuC99OucvLmkFpN" : {
+      "id" : "NqYYHG0B-AuMYwpL2Zeap$$mx5bPDyuC99OucvLmkFpN",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -280,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "MdF8b5YEoAiyfi5MJ0xLJ$$sxHsF_nnaCrzl11riCRe2",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "EjNFw8MvJws6MXY68f7My$$ZgH8ZY7LBGnXqAtsGWl_0",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "ls -ltr\n",
+        "language" : "bash",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "p6wfvy_B3Rah4-V3nA-ND",
+    "source" : "3kQlBeRNsS_FTiHoA1rod$$uDy_aDA5ofWP8rHFM6ktL",
+    "target" : "CWDHRCE_fpsOx7jb62AQr$$5w_oq3iLFhFaTUl7sye9N",
+    "sourcePort" : "1k05XuKVivE_jqN3BcMoq$$Dh1LzgrcIai20H7dk9M8H",
+    "targetPort" : "4Mf2bucNn0k2xy_mW0l1j$$5IVt6pgGkBGvMYmo4KOl1"
+  }, {
+    "id" : "MkfhkNyGakNkQZXMOjrOZ",
+    "source" : "3kQlBeRNsS_FTiHoA1rod$$uDy_aDA5ofWP8rHFM6ktL",
+    "target" : "NqYYHG0B-AuMYwpL2Zeap$$mx5bPDyuC99OucvLmkFpN",
+    "sourcePort" : "1k05XuKVivE_jqN3BcMoq$$Dh1LzgrcIai20H7dk9M8H",
+    "targetPort" : "MdF8b5YEoAiyfi5MJ0xLJ$$sxHsF_nnaCrzl11riCRe2"
+  } ]
 }
