@@ -1,0 +1,458 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "9313",
+    "jobId" : "jobs/Snowflake-SQLAirflow-Automation",
+    "name" : "Snowflake-SQLAirflow-Automation",
+    "dagName" : "test_abhisheks_e2etests_Snowflake_AutomationJobs_Project_Snowflake_SQLAirflow_Automation",
+    "schedule" : "0 0 17 2 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ {
+      "id" : "64623/functions/airflowFunctions/squared_numbers",
+      "name" : "squared_numbers",
+      "code" : "def squared_numbers(number):\n    print('hello')\n    return (number*number)/d",
+      "initCode" : "d=10",
+      "projectId" : "64623",
+      "projectName" : "Snowflake_AutomationJobs_Project"
+    }, {
+      "id" : "64623/functions/airflowFunctions/join_2_strings",
+      "name" : "join_2_strings",
+      "code" : "def join_2_strings(d1, d2):\n    return f\"{d1}{separator}{d2}\"",
+      "initCode" : "separator=' '",
+      "projectId" : "64623",
+      "projectName" : "Snowflake_AutomationJobs_Project"
+    }, {
+      "id" : "64623/functions/airflowFunctions/delete_me",
+      "name" : "delete_me",
+      "code" : "def delete_me(d1, d2):\n    return f\"{d1}{separator}{d2}\"",
+      "initCode" : "separator=' '",
+      "projectId" : "64623",
+      "projectName" : "Snowflake_AutomationJobs_Project"
+    } ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "b6KEsOAZl1l3E9IuVUuC0$$GzL82QQvDUx4KLaFfvo22" : {
+      "id" : "b6KEsOAZl1l3E9IuVUuC0$$GzL82QQvDUx4KLaFfvo22",
+      "component" : "Branch",
+      "metadata" : {
+        "label" : "Branch_1",
+        "slug" : "Branch_1",
+        "x" : -520,
+        "y" : -400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "kOB-yKCgleHv2hpvZIL2H$$AVziXWShHUOjkK035nQrP",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "KifPUKctBlX21ABKtUmug$$kua8I1-bZUzulkyjOLYuQ",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "callback" : "def which_gem_to_run():\n    return \"Python_0\"",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "ebWMz-W28WJLcTOt7jo5e$$AVb0nQzCi6UxbUGFS-wbx" : {
+      "id" : "ebWMz-W28WJLcTOt7jo5e$$AVb0nQzCi6UxbUGFS-wbx",
+      "component" : "Script",
+      "metadata" : {
+        "label" : "Script_1",
+        "slug" : "Script_1",
+        "x" : -800,
+        "y" : -400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ICOfY_QHpdKNzFxEFkUZf$$3hIyZl_t8GcF_AYHsjg1K",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "W9IMYvzSSqJDRcOtno49-$$bOzAc6KLpTgSOCjxvZ8Qp",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "code" : "ls -ltr\n",
+        "language" : "bash",
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "H2T6V8usyKELI3hlQXxhg$$D6IvfbMR_whwlJJiX760M" : {
+      "id" : "H2T6V8usyKELI3hlQXxhg$$D6IvfbMR_whwlJJiX760M",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_1",
+        "slug" : "Model_1",
+        "x" : -940,
+        "y" : -400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KaQXC6vviRFh_5-Rs048f$$0LfOPn9LtT_3UtZg1uqvP",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "zhdAKfIF7cU1OvZ-zmI-1$$dU40H5IliU-UNjeOD8ePh",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "retry_delay" : 1
+      },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "commit",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "64623",
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "gitEntityValueTag" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "4421",
+        "gitEntityValue" : "testBranchSnowflakeJobs",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "gitEntityValueCommit" : "testBranchSnowflakeJobs",
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : true,
+        "sqlProjectType" : "snowflake",
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : "main",
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "test_Automation_Snowflake_jobs_model",
+          "value" : "test_Automation_Snowflake_jobs_model",
+          "id" : "64623/.prophecy/metadata/sqlmodels/test_Automation_Snowflake_jobs_model",
+          "name" : "test_Automation_Snowflake_jobs_model"
+        }, {
+          "label" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "value" : "test_modelanother_Automation_Snowflake_jobs_model",
+          "id" : "64623/.prophecy/metadata/sqlsnapshots/test_modelanother_Automation_Snowflake_jobs_model",
+          "name" : "test_modelanother_Automation_Snowflake_jobs_model"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "L4xsqu5J7sA3SFahsjVQq$$QpGfvOHbMBTKWTM4BlY7T" : {
+      "id" : "L4xsqu5J7sA3SFahsjVQq$$QpGfvOHbMBTKWTM4BlY7T",
+      "component" : "Python",
+      "metadata" : {
+        "label" : "Python_0",
+        "slug" : "Python_0",
+        "x" : -560,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5Jw17ZzTT_I_c4jR_446z$$bIjrN0Dt1OK-DIRb6ZUmY",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "gC0WGWTRGbI4fYlGlfDNw$$vxKRsLKDk1dHB58Znt8KH",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "templatesExts" : null,
+        "code" : "def return_method():\n    test_config1_iteration1 = join_2_strings(squared_numbers(2), \"test value\")\n    test_config1_iteration2 = join_2_strings(squared_numbers(4), \"test value iteration2\")\n    return [\n        {\n            \"c1_data\": [\n                {\n                    \"data\": test_config1_iteration1\n                }\n            ],\n            \"c2_data\": [\n                {\n                    \"data\": join_2_strings(squared_numbers(3), \"test value\") == \"hello\"\n                }\n            ],\n            \"c3_data\": 1\n        },\n        {\n            \"c1_data\": [\n                {\n                    \"data\": test_config1_iteration2\n                }\n            ],\n            \"c2_data\": [\n                {\n                    \"data\": join_2_strings(squared_numbers(5), \"test value\") != \"hello\"\n                }\n            ],\n            \"c3_data\": 2\n        }\n    ]",
+        "valueInLogs" : true,
+        "opArgs" : null,
+        "templatesDict" : null,
+        "taskId" : null,
+        "opKwargs" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    },
+    "R-B2MpILqC2zlMJzd-gwK$$-2PvT-JcfhVYReSf8FRKk" : {
+      "id" : "R-B2MpILqC2zlMJzd-gwK$$-2PvT-JcfhVYReSf8FRKk",
+      "component" : "TaskGroup",
+      "metadata" : {
+        "label" : "TaskGroup_1",
+        "slug" : "TaskGroup_1",
+        "x" : -280,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "d__Ovj0aBeP--D3ou6wnF$$eGyPYkASBnEwJoIUcad4a",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "9iF0uBqcR4GNcCAGW4JWL$$WoqWjCKBy6-lqTfhjimmI",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "taskId" : null
+      },
+      "connections" : [ ],
+      "processes" : {
+        "kp9NUebirQIDrShCPgNER$$1wccMn52A0yR8N5XW1yo-" : {
+          "id" : "kp9NUebirQIDrShCPgNER$$1wccMn52A0yR8N5XW1yo-",
+          "component" : "Python",
+          "metadata" : {
+            "label" : "Python_2",
+            "slug" : "Python_2",
+            "x" : -540,
+            "y" : -200
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "V-Jxe-K1IaFCgU8qqD3v9$$eUo5h474yJsjTqyRe4He6",
+              "slug" : ""
+            } ],
+            "outputs" : [ {
+              "id" : "Z196lUoXZzlpnRl64fdWM$$04nroQLzqDablw5qAaOOI",
+              "slug" : ""
+            } ]
+          },
+          "settings" : { },
+          "properties" : {
+            "templatesExts" : null,
+            "code" : "def returnString():\n    return \"Hello Sir\"",
+            "valueInLogs" : true,
+            "opArgs" : null,
+            "templatesDict" : null,
+            "taskId" : null,
+            "opKwargs" : null
+          },
+          "connections" : [ ],
+          "processes" : { }
+        }
+      }
+    },
+    "5U7WNhOUVVUuSNRbDTURF$$_LC-1w4aVMTQdozochwuO" : {
+      "id" : "5U7WNhOUVVUuSNRbDTURF$$_LC-1w4aVMTQdozochwuO",
+      "component" : "ForEachLoop",
+      "metadata" : {
+        "label" : "ForEachLoop_1",
+        "slug" : "ForEachLoop_1",
+        "x" : -420,
+        "y" : -220
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "itXxOUfjRXuY8rJupGatl$$s3vE_3Etzn7f-VU871jKV",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "8UolCK6WowdoyKe14yiEZ$$5nJlLktB2kZS2lKR4vuMG",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "loopVariables" : null,
+        "taskId" : null,
+        "loopSources" : [ {
+          "type" : "xcom",
+          "taskId" : "Python_0",
+          "key" : "return_value",
+          "loopVariables" : [ {
+            "name" : "config_1",
+            "type" : "string",
+            "expression" : "value[\"c1_data\"][0][\"data\"]",
+            "enabled" : true
+          }, {
+            "name" : "config_2",
+            "type" : "boolean",
+            "expression" : "value[\"c2_data\"][0][\"data\"]",
+            "enabled" : true
+          }, {
+            "name" : "config_3",
+            "type" : "number",
+            "expression" : "value[\"c3_data\"]",
+            "enabled" : true
+          } ]
+        } ]
+      },
+      "connections" : [ ],
+      "processes" : {
+        "5FahBrNzvDuL7Q3trUjS4$$eiiUiGL0b8GrUS3ZDFIPJ" : {
+          "id" : "5FahBrNzvDuL7Q3trUjS4$$eiiUiGL0b8GrUS3ZDFIPJ",
+          "component" : "Python",
+          "metadata" : {
+            "label" : "Python_1",
+            "slug" : "Python_1",
+            "x" : -540,
+            "y" : -200
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "Rw9RJ8-Z34lTctpWlThxG$$aukKaH29GhXk8IscCaPO-",
+              "slug" : ""
+            } ],
+            "outputs" : [ {
+              "id" : "z5p7sHFysQztxScxZfz9S$$MbcDepMfOeMFSIKC7wgaa",
+              "slug" : ""
+            } ]
+          },
+          "settings" : { },
+          "properties" : {
+            "templatesExts" : null,
+            "code" : "def return_method():\n    print(f\"{config_1},{config_2},{config_3}\")",
+            "valueInLogs" : true,
+            "opArgs" : null,
+            "templatesDict" : null,
+            "taskId" : null,
+            "opKwargs" : null
+          },
+          "connections" : [ ],
+          "processes" : { }
+        }
+      }
+    },
+    "NiBXyONWJVLH5aziwzXp6$$gu0dMjwE8pbseoRiEUNGG" : {
+      "id" : "NiBXyONWJVLH5aziwzXp6$$gu0dMjwE8pbseoRiEUNGG",
+      "component" : "Python",
+      "metadata" : {
+        "label" : "Python_3",
+        "slug" : "Python_3",
+        "x" : -660,
+        "y" : -400
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "Ccfx8GYkAkHmFtxKKX4OS$$qRzPXY0Sb47Q-VJDFQ8Dv",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "hOx0L10Wrh64BY55uYQtq$$kw2cUMLIabtZyb6lKUYgu",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "templatesExts" : null,
+        "code" : "def return_method():\n    test_config1_iteration1 = join_2_strings(squared_numbers(2), \"test value\")\n    test_config1_iteration2 = join_2_strings(squared_numbers(4), \"test value iteration2\")\n    return [\n        {\n            \"c1_data\": [\n                {\n                    \"data\": test_config1_iteration1\n                }\n            ],\n            \"c2_data\": [\n                {\n                    \"data\": join_2_strings(squared_numbers(3), \"test value\") == \"hello\"\n                }\n            ],\n            \"c3_data\": 1\n        },\n        {\n            \"c1_data\": [\n                {\n                    \"data\": test_config1_iteration2\n                }\n            ],\n            \"c2_data\": [\n                {\n                    \"data\": join_2_strings(squared_numbers(5), \"test value\") != \"hello\"\n                }\n            ],\n            \"c3_data\": 2\n        }\n    ]",
+        "valueInLogs" : true,
+        "opArgs" : null,
+        "templatesDict" : null,
+        "taskId" : null,
+        "opKwargs" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ {
+    "id" : "po3VQlVoROhhGR_U-9hLc",
+    "source" : "L4xsqu5J7sA3SFahsjVQq$$QpGfvOHbMBTKWTM4BlY7T",
+    "target" : "5U7WNhOUVVUuSNRbDTURF$$_LC-1w4aVMTQdozochwuO",
+    "sourcePort" : "gC0WGWTRGbI4fYlGlfDNw$$vxKRsLKDk1dHB58Znt8KH",
+    "targetPort" : "itXxOUfjRXuY8rJupGatl$$s3vE_3Etzn7f-VU871jKV"
+  }, {
+    "id" : "KJpnJawrEoGh9rgwIXtPg",
+    "source" : "L4xsqu5J7sA3SFahsjVQq$$QpGfvOHbMBTKWTM4BlY7T",
+    "target" : "R-B2MpILqC2zlMJzd-gwK$$-2PvT-JcfhVYReSf8FRKk",
+    "sourcePort" : "gC0WGWTRGbI4fYlGlfDNw$$vxKRsLKDk1dHB58Znt8KH",
+    "targetPort" : "d__Ovj0aBeP--D3ou6wnF$$eGyPYkASBnEwJoIUcad4a"
+  }, {
+    "id" : "4RRxEqgGckueLzy5VEwRq",
+    "source" : "H2T6V8usyKELI3hlQXxhg$$D6IvfbMR_whwlJJiX760M",
+    "target" : "ebWMz-W28WJLcTOt7jo5e$$AVb0nQzCi6UxbUGFS-wbx",
+    "sourcePort" : "zhdAKfIF7cU1OvZ-zmI-1$$dU40H5IliU-UNjeOD8ePh",
+    "targetPort" : "ICOfY_QHpdKNzFxEFkUZf$$3hIyZl_t8GcF_AYHsjg1K"
+  }, {
+    "id" : "yy1zW1LJtwczMZZo5P3um",
+    "source" : "b6KEsOAZl1l3E9IuVUuC0$$GzL82QQvDUx4KLaFfvo22",
+    "target" : "L4xsqu5J7sA3SFahsjVQq$$QpGfvOHbMBTKWTM4BlY7T",
+    "sourcePort" : "KifPUKctBlX21ABKtUmug$$kua8I1-bZUzulkyjOLYuQ",
+    "targetPort" : "5Jw17ZzTT_I_c4jR_446z$$bIjrN0Dt1OK-DIRb6ZUmY"
+  }, {
+    "id" : "moXRYkiTfx5L4T1CMdU7m",
+    "source" : "b6KEsOAZl1l3E9IuVUuC0$$GzL82QQvDUx4KLaFfvo22",
+    "target" : "NiBXyONWJVLH5aziwzXp6$$gu0dMjwE8pbseoRiEUNGG",
+    "sourcePort" : "KifPUKctBlX21ABKtUmug$$kua8I1-bZUzulkyjOLYuQ",
+    "targetPort" : "Ccfx8GYkAkHmFtxKKX4OS$$qRzPXY0Sb47Q-VJDFQ8Dv"
+  } ]
+}

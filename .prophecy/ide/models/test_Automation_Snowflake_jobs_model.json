@@ -1,0 +1,91 @@
+{
+  "id" : "test_Automation_Snowflake_jobs_model",
+  "metainfo" : {
+    "label" : "test_Automation_Snowflake_jobs_model",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "graphConfig" : {
+      "entityConfig" : {
+        "full_refresh" : true,
+        "materialized" : "table",
+        "type" : "ModelConfig"
+      }
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "test_Automation_Snowflake_jobs_model##BEFF9vxf" : {
+      "id" : "test_Automation_Snowflake_jobs_model##BEFF9vxf",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "test_Automation_Snowflake_jobs_model",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM qa_test_Automation_seed_job_snowflake\n",
+        "isModel" : true,
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "DcUmoNkf",
+          "slug" : "qa_test_Automation_seed_job_snowflake"
+        } ],
+        "outputs" : [ {
+          "id" : "NglzoLb9",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "MQQSCI_zHNqZEHRrPm_he" : {
+      "id" : "MQQSCI_zHNqZEHRrPm_he",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "qa_test_Automation_seed_job_snowflake",
+        "slug" : "qa_test_Automation_seed_job_snowflake",
+        "x" : -500,
+        "y" : -180,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "qa_test_Automation_seed_job_snowflake",
+          "sourceType" : "Seed",
+          "sourceName" : "",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "oB3PZsTs5qB8Yg-ZqZvT1",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "NOOiwQ8Pel3ZvqP853-du",
+    "source" : "MQQSCI_zHNqZEHRrPm_he",
+    "sourcePort" : "oB3PZsTs5qB8Yg-ZqZvT1",
+    "target" : "test_Automation_Snowflake_jobs_model##BEFF9vxf",
+    "targetPort" : "DcUmoNkf"
+  } ],
+  "component" : "Model"
+}
