@@ -1,0 +1,15 @@
+---
+version: 2
+snapshots:
+- name: "test_modelanother_Automation_Snowflake_jobs_model"
+  columns:
+  - name: "ID"
+    dataType:
+      type: "Number"
+  - name: "NAME"
+    dataType:
+      type: "String"
+  - name: "UPDATED_AT"
+    dataType:
+      type: "Date"
+  tests: []
